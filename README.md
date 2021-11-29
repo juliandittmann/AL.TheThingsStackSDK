@@ -1,5 +1,5 @@
-[![Current](https://github.com/juliandittmann/AL.Template/actions/workflows/current.yml/badge.svg)](https://github.com/juliandittmann/AL.Template/actions/workflows/current.yml)
+[![Current](https://github.com/juliandittmann/AL.TheThingsStackSDK/actions/workflows/current.yml/badge.svg)](https://github.com/juliandittmann/AL.TheThingsStackSDK/actions/workflows/current.yml)
 
-# AL.Template for Dynamics 365 Business Central Projects
+# AL.TheThingsStackSDK for Dynamics 365 Business Central
 
-This is a template which provides preconfigured settings and GitHub Actions for a Dynamics 365 Business Central Project.
+This is a SDK which API access to TheThingsStack.
