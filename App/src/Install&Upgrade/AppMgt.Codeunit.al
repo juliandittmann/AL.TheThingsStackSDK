@@ -3,7 +3,7 @@ codeunit 52404 "jdi TTS App Mgt."
     Access = Public;
 
     /// <summary>
-    /// Gets the AppId of Bing Maps SDK
+    /// Gets the AppId of The Things Stack SDK
     /// </summary>
     /// <returns>AppId</returns>
     procedure GetAppId(): Guid
