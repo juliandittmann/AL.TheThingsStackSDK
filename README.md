@@ -2,4 +2,4 @@
 
 # AL.TheThingsStackSDK for Dynamics 365 Business Central
 
-This is a SDK which API access to TheThingsStack.
+This is a SDK which provides API access to The Things Stack.
