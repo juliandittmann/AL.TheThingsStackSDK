@@ -1,6 +1,6 @@
 {
-  "id": "9c30c7cc-475b-4bb3-b9ed-63b83d3627e1",
-  "name": "AL.Template",
+  "id": "53189a3e-4dec-49ee-82dd-d3fa0a7bd5e7",
+  "name": "AL.The Things Stack SDK",
   "publisher": "Julian Dittmann",
   "brief": "",
   "description": "",
@@ -8,7 +8,7 @@
   "privacyStatement": "",
   "EULA": "",
   "help": "",
-  "url": "https://github.com/juliandittmann/AL.Template",
+  "url": "https://juliandittmann.github.io/AL.TheThingsStackSDK/",
   "logo": "",
   "dependencies": [
   ],
@@ -24,11 +24,11 @@
   },
   "idRanges":[
     {
-      "from": 50000,
-      "to": 50099
+      "from": 52400,
+      "to": 52499
     }
   ],
-  "contextSensitiveHelpUrl": "https://example.com/help/",
+  "contextSensitiveHelpUrl": "https://github.com/juliandittmann/AL.TheThingsStackSDK",
   "features": [
     "TranslationFile"
   ],

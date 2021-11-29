@@ -1,6 +1,6 @@
 {
-  "id": "3b110653-d432-41b0-ad8d-93b7a907d5ea",
-  "name": "AL.Template Test",
+  "id": "6ed19ac7-eaa0-4d62-bcbe-77908e92efe9",
+  "name": "AL.The Things Stack SDK Test",
   "publisher": "Julian Dittmann",
   "brief": "AL.Template Test App",
   "description": "AL.Template Test App",
@@ -8,7 +8,7 @@
   "privacyStatement": "",
   "EULA": "",
   "help": "",
-  "url": "https://github.com/juliandittmann/AL.Template",
+  "url": "https://juliandittmann.github.io/AL.TheThingsStackSDK/",
   "logo": "",
   "dependencies": [
     {
@@ -42,10 +42,10 @@
       "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf"
     },
     {
-      "name": "AL.Template",
+      "name": "AL.The Things Stack SDK",
       "publisher": "Julian Dittmann",
       "version": "19.0.0.0",
-      "id": "9c30c7cc-475b-4bb3-b9ed-63b83d3627e1"
+      "id": "53189a3e-4dec-49ee-82dd-d3fa0a7bd5e7"
     }
   ],
   "screenshots": [],
@@ -64,7 +64,7 @@
       "to": 50199
     }
   ],
-  "contextSensitiveHelpUrl": "https://example.com/help/",
+  "contextSensitiveHelpUrl": "https://github.com/juliandittmann/AL.TheThingsStackSDK",
   "features": [
     "TranslationFile"
   ],
