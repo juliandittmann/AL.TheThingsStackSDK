@@ -20,7 +20,7 @@ page 50255 "jdi TTS Demo GetGateways"
         area(Processing)
         {
 
-            action(TestGetDevices)
+            action(TestGetGateways)
             {
                 ApplicationArea = All;
                 Image = TestFile;
