@@ -1,0 +1,44 @@
+{
+  "id": "4c51e3b6-e7fd-412c-884f-78cf35bd6025",
+  "name": "The Things Stack SDK Demo",
+  "publisher": "Julian Dittmann",
+  "brief": "Demo for The Things Stack SDK",
+  "description": "Demo with examples for The Things Stack SDK",
+  "version": "19.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://github.com/juliandittmann/AL.TheThingsStackSDK",
+  "logo": "",
+  "dependencies": [
+    {
+      "name": "The Things Stack SDK",
+      "publisher": "Julian Dittmann",
+      "version": "19.0.0.0",
+      "id": "53189a3e-4dec-49ee-82dd-d3fa0a7bd5e7"
+    }
+  ],
+  "screenshots": [],
+  "application": "19.0.0.0",
+  "platform": "19.0.0.0",
+  "runtime": "8.0",
+  "target": "Cloud",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "idRanges":[
+    {
+      "from": 50250,
+      "to": 50299
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://example.com/help/",
+  "features": [
+    "TranslationFile"
+  ],
+  "supportedLocales": [
+    "en-US"
+  ]
+}

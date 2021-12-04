@@ -1,0 +1,21 @@
+{
+    "name": "Ignore Ruleset",
+    "description": "These rules are ignored",
+    "rules": [
+        {
+            "id": "AS0051",
+            "action": "Hidden",
+            "justification": "This is a Demo App"
+        },
+        {
+            "id": "AS0084",
+            "action": "Hidden",
+            "justification": "Objectrange in Demo App does not matter"
+        },        
+        {
+            "id": "AA0072",
+            "action": "Hidden",
+            "justification": "Variablenames are perfect. maybe later"
+        }
+    ]
+}

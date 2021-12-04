@@ -2,10 +2,12 @@ codeunit 52408 "jdi TTS REST Helper"
 {
     Access = Public;
 
-    procedure InvokeWebRequest(Url: Text; var Response: HttpResponseMessage): Boolean
+    procedure InvokeWebRequest(Url: Text; pKey: Text; var Response: HttpResponseMessage): Boolean
     var
         Client: HttpClient;
     begin
+        Client.DefaultRequestHeaders.Clear();
+        Client.DefaultRequestHeaders.Add('Authorization', 'Bearer ' + pKey);
         exit(Client.Get(Url, Response));
     end;
 
