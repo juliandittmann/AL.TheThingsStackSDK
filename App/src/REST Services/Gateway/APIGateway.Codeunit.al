@@ -1,7 +1,7 @@
 codeunit 52401 "jdi TTS API Gateway"
 {
     Access = Public;
-    Description = 'The Things Stack Gateway API';
+    Description = 'The Things Stack Gateway API. For further documentation visit: https://www.thethingsindustries.com/docs/reference/api/gateway/';
 
     procedure GetGateways(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetGateways"; Parameter: Dictionary of [Enum "jdi TTS Param GetGateways", Text]; var JsonResponse: JsonObject): Boolean
     var

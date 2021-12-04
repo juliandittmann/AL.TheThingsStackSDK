@@ -1,7 +1,7 @@
 codeunit 52400 "jdi TTS API Application"
 {
     Access = Public;
-    Description = 'The Things Stack Application API';
+    Description = 'The Things Stack Application API. For further documentation vistis: https://www.thethingsindustries.com/docs/reference/api/application/';
 
     procedure GetApplications(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetApplications"; Parameter: Dictionary of [Enum "jdi TTS Param GetApplications", Text]; var JsonResponse: JsonObject): Boolean
     var

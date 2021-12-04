@@ -1,7 +1,7 @@
 codeunit 52406 "jdi TTS API Storage"
 {
     Access = Public;
-    Description = 'The Things Stack Storage Integration API';
+    Description = 'The Things Stack Storage Integration API. For further documentation visit: https://www.thethingsindustries.com/docs/reference/api/storage_integration/';
 
     procedure GetStoredApplicationUp(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetStoredAppUp"; Parameter: Dictionary of [Enum "jdi TTS Param GetStoredAppUp", Text]; var JsonResponse: JsonObject): Boolean
     var
