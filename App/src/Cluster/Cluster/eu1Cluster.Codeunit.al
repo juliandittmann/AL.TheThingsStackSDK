@@ -1,6 +1,7 @@
 codeunit 52407 "jdi TTS eu1 Cluster" implements "jdi TTS IClusterAddress"
 {
     Access = Internal;
+    Description = 'For further documentation visit: https://www.thethingsindustries.com/docs/getting-started/ttn/addresses/';
 
     procedure GetAPIEndpoint(): Text;
     var
