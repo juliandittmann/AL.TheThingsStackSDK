@@ -1,7 +1,7 @@
 codeunit 52405 "jdi TTS API Device"
 {
     Access = Public;
-    Description = 'The Things Stack Application API';
+    Description = 'The Things Stack Device API';
 
     procedure GetDevices(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetDevices"; Parameter: Dictionary of [Enum "jdi TTS Param GetDevices", Text]; var JsonResponse: JsonObject): Boolean
     var
