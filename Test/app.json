@@ -1,8 +1,8 @@
 {
   "id": "6ed19ac7-eaa0-4d62-bcbe-77908e92efe9",
-  "name": "AL.The Things Stack SDK Test",
+  "name": "The Things Stack SDK Test",
   "publisher": "Julian Dittmann",
-  "brief": "AL.Template Test App",
+  "brief": "Test App for The Things Stack SDK",
   "description": "AL.Template Test App",
   "version": "19.0.0.0",
   "privacyStatement": "",
@@ -42,7 +42,7 @@
       "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf"
     },
     {
-      "name": "AL.The Things Stack SDK",
+      "name": "The Things Stack SDK",
       "publisher": "Julian Dittmann",
       "version": "19.0.0.0",
       "id": "53189a3e-4dec-49ee-82dd-d3fa0a7bd5e7"
