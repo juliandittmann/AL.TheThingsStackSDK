@@ -41,18 +41,20 @@ page 50252 "jdi TTS Demo GetApplications"
                     APIVerion := APIVerion::v3;
 
                     Clear(Param);
-                    Param.Add(GetApplicationsParam::"AuthToken", GetKey());
+                    Param.Add(GetApplicationsParam::"AuthToken", GetDefaultAPIKey());
 
                     ApplicationAPI.GetApplications(Cluster, APIVerion, Param, JResponse);
                     ApplicationAPI.GetApplications(Cluster, APIVerion, Param, HttpResponse);
                 end;
             }
-
         }
     }
 
-    local procedure GetKey(): Text
+    local procedure GetDefaultAPIKey(): Text
+    var
+        TTSSDKDemoSetup: Record "jdi TTS Demo Setup";
     begin
-        exit('');
+        if TTSSDKDemoSetup.Get() then
+            exit(TTSSDKDemoSetup.GetDefaultAPIKey());
     end;
 }
