@@ -8,7 +8,7 @@ codeunit 52401 "jdi TTS API Gateway"
         IGetGateways: Interface "jdi TTS IGetGateways";
     begin
         IGetGateways := APIVersion;
-        IGetGateways.GetGateways(Cluster, CopyParameter(Parameter), JsonResponse);
+        exit(IGetGateways.GetGateways(Cluster, CopyParameter(Parameter), JsonResponse));
     end;
 
     procedure GetGateways(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetGateways"; Parameter: Dictionary of [Enum "jdi TTS Param GetGateways", Text]; var HttpResponse: HttpResponseMessage): Boolean
@@ -16,7 +16,7 @@ codeunit 52401 "jdi TTS API Gateway"
         IGetGateways: Interface "jdi TTS IGetGateways";
     begin
         IGetGateways := APIVersion;
-        IGetGateways.GetGateways(Cluster, CopyParameter(Parameter), HttpResponse);
+        exit(IGetGateways.GetGateways(Cluster, CopyParameter(Parameter), HttpResponse));
     end;
 
     local procedure CopyParameter(Parameter: Dictionary of [Enum "jdi TTS Param GetGateways", Text]) ParameterCopy: Dictionary of [enum "jdi TTS Param GetGateways", Text];

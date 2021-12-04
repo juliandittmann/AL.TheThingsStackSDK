@@ -8,7 +8,7 @@ codeunit 52405 "jdi TTS API Device"
         IGetDevices: Interface "jdi TTS IGetDevices";
     begin
         IGetDevices := APIVersion;
-        IGetDevices.GetDevices(Cluster, CopyParameter(Parameter), JsonResponse);
+        exit(IGetDevices.GetDevices(Cluster, CopyParameter(Parameter), JsonResponse));
     end;
 
     procedure GetDevices(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetDevices"; Parameter: Dictionary of [Enum "jdi TTS Param GetDevices", Text]; var HttpResponse: HttpResponseMessage): Boolean
@@ -16,7 +16,7 @@ codeunit 52405 "jdi TTS API Device"
         IGetDevices: Interface "jdi TTS IGetDevices";
     begin
         IGetDevices := APIVersion;
-        IGetDevices.GetDevices(Cluster, CopyParameter(Parameter), HttpResponse);
+        exit(IGetDevices.GetDevices(Cluster, CopyParameter(Parameter), HttpResponse));
     end;
 
     local procedure CopyParameter(Parameter: Dictionary of [Enum "jdi TTS Param GetDevices", Text]) ParameterCopy: Dictionary of [enum "jdi TTS Param GetDevices", Text];

@@ -8,7 +8,7 @@ codeunit 52400 "jdi TTS API Application"
         IGetApplications: Interface "jdi TTS IGetApplications";
     begin
         IGetApplications := APIVersion;
-        IGetApplications.GetApplications(Cluster, CopyParameter(Parameter), JsonResponse);
+        exit(IGetApplications.GetApplications(Cluster, CopyParameter(Parameter), JsonResponse));
     end;
 
     procedure GetApplications(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetApplications"; Parameter: Dictionary of [Enum "jdi TTS Param GetApplications", Text]; var HttpResponse: HttpResponseMessage): Boolean
@@ -16,7 +16,7 @@ codeunit 52400 "jdi TTS API Application"
         IGetApplications: Interface "jdi TTS IGetApplications";
     begin
         IGetApplications := APIVersion;
-        IGetApplications.GetApplications(Cluster, CopyParameter(Parameter), HttpResponse);
+        exit(IGetApplications.GetApplications(Cluster, CopyParameter(Parameter), HttpResponse));
     end;
 
     local procedure CopyParameter(Parameter: Dictionary of [Enum "jdi TTS Param GetApplications", Text]) ParameterCopy: Dictionary of [enum "jdi TTS Param GetApplications", Text];

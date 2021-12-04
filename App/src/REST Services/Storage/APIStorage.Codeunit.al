@@ -8,7 +8,7 @@ codeunit 52406 "jdi TTS API Storage"
         IGetStoredAppUp: Interface "jdi TTS IGetStoredAppUp";
     begin
         IGetStoredAppUp := APIVersion;
-        IGetStoredAppUp.GetStoredApplicationUp(Cluster, CopyParameter(Parameter), JsonResponse);
+        exit(IGetStoredAppUp.GetStoredApplicationUp(Cluster, CopyParameter(Parameter), JsonResponse));
     end;
 
     procedure GetStoredApplicationUp(Cluster: Enum "jdi TTS Cluster Address"; APIVersion: Enum "jdi TTS API GetStoredAppUp"; Parameter: Dictionary of [Enum "jdi TTS Param GetStoredAppUp", Text]; var HttpResponse: HttpResponseMessage): Boolean
@@ -16,7 +16,7 @@ codeunit 52406 "jdi TTS API Storage"
         IGetStoredAppUp: Interface "jdi TTS IGetStoredAppUp";
     begin
         IGetStoredAppUp := APIVersion;
-        IGetStoredAppUp.GetStoredApplicationUp(Cluster, CopyParameter(Parameter), HttpResponse);
+        exit(IGetStoredAppUp.GetStoredApplicationUp(Cluster, CopyParameter(Parameter), HttpResponse));
     end;
 
     local procedure CopyParameter(Parameter: Dictionary of [Enum "jdi TTS Param GetStoredAppUp", Text]) ParameterCopy: Dictionary of [enum "jdi TTS Param GetStoredAppUp", Text];
