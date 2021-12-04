@@ -41,7 +41,7 @@ page 50252 "jdi TTS Demo GetApplications"
                     APIVerion := APIVerion::v3;
 
                     Clear(Param);
-                    Param.Add(GetApplicationsParam::"key", GetKey());
+                    Param.Add(GetApplicationsParam::"AuthToken", GetKey());
 
                     ApplicationAPI.GetApplications(Cluster, APIVerion, Param, JResponse);
                     ApplicationAPI.GetApplications(Cluster, APIVerion, Param, HttpResponse);
