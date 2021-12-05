@@ -4,7 +4,7 @@ page 50250 "jdi TTS Demo API Key Card"
     UsageCategory = None;
     SourceTable = "jdi TTS Demo API Key";
 
-    Caption = 'The Things Stack SDK Demo API Key Card';
+    Caption = 'TTS Demo API Key Card';
 
     layout
     {

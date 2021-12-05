@@ -3,7 +3,7 @@ page 50253 "jdi TTS Demo Setup Card"
     PageType = Card;
     ApplicationArea = All;
 
-    Caption = 'The Things Stack SDK Demo Setup';
+    Caption = 'TTS Demo Setup';
 
     UsageCategory = Administration;
     SourceTable = "jdi TTS Demo Setup";

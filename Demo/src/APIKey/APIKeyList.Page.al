@@ -4,7 +4,7 @@ page 50251 "jdi TTS Demo API Key List"
     ApplicationArea = All;
     UsageCategory = Administration;
 
-    Caption = 'The Things Stack SDK Demo API Key List';
+    Caption = 'TTS Demo API Key List';
 
     CardPageId = "jdi TTS Demo API Key Card";
     SourceTable = "jdi TTS Demo API Key";
