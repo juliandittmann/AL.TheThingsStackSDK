@@ -54,11 +54,11 @@ page 50258 "jdi TTS Demo Gateway List"
     {
         area(Processing)
         {
-            action(GetApplications)
+            action(GetGateways)
             {
                 Caption = 'Load Gateways';
                 ApplicationArea = All;
-                Image = Download;
+                Image = Refresh;
 
                 Promoted = true;
                 PromotedCategory = Process;

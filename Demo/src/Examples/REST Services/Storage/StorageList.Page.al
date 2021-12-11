@@ -65,7 +65,7 @@ page 50260 "jdi TTS Demo Storage List"
             {
                 Caption = 'Load Storage';
                 ApplicationArea = All;
-                Image = Download;
+                Image = Refresh;
 
                 Promoted = true;
                 PromotedCategory = Process;

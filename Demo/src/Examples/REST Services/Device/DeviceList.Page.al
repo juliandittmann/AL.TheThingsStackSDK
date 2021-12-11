@@ -67,11 +67,11 @@ page 50259 "jdi TTS Demo Device List"
     {
         area(Processing)
         {
-            action(GetApplications)
+            action(GetDevices)
             {
                 Caption = 'Load Devices';
                 ApplicationArea = All;
-                Image = Download;
+                Image = Refresh;
 
                 Promoted = true;
                 PromotedCategory = Process;
