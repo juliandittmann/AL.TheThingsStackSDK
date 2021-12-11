@@ -20,11 +20,10 @@ codeunit 52413 "jdi TTS GetStoredAppUpv3" implements "jdi TTS IGetStoredAppUp"
 
     procedure GetStoredApplicationUp(Cluster: Enum "jdi TTS Cluster Address"; Parameter: Dictionary of [enum "jdi TTS Param GetStoredAppUp", Text]; var JsonResponse: JsonObject): Boolean;
     var
-        RESTHelper: Codeunit "jdi TTS REST Helper";
         HttpResponse: HttpResponseMessage;
     begin
         GetStoredApplicationUp(Cluster, Parameter, HttpResponse);
-        exit(RESTHelper.ProcessHttpResponseMessage(HttpResponse, JsonResponse));
+        exit(ProcessHttpResponseMessage(HttpResponse, JsonResponse));
     end;
 
     local procedure BuildAPIUrl(Cluster: Enum "jdi TTS Cluster Address"; var Parameter: Dictionary of [enum "jdi TTS Param GetStoredAppUp", Text]): Text
@@ -89,5 +88,47 @@ codeunit 52413 "jdi TTS GetStoredAppUpv3" implements "jdi TTS IGetStoredAppUp"
         Client.DefaultRequestHeaders.Add('Authorization', 'Bearer ' + AuthToken);
         Client.DefaultRequestHeaders.Add('Accept', 'text/event-stream');
         exit(Client.Get(Url, Response));
+    end;
+
+    local procedure ProcessHttpResponseMessage(Response: HttpResponseMessage; var ResponseJObject: JsonObject): Boolean;
+    var
+        Result: Text;
+
+    begin
+        Clear(ResponseJObject);
+        if Response.Content().ReadAs(Result) then
+            ResponseJObject := BuildResultJObject(Result);
+
+        exit(Response.IsSuccessStatusCode());
+    end;
+
+    local procedure BuildResultJObject(Result: Text): JsonObject
+    var
+        ResultJObject: JsonObject;
+        ResultList: List of [Text];
+    begin
+        ResultList := Result.Split();
+        RemoveEmptyEntries(ResultList);
+        ResultJObject.Add('results', BuildResultJArray(ResultList));
+        exit(ResultJObject);
+    end;
+
+    local procedure RemoveEmptyEntries(var ResultList: List of [Text])
+    begin
+        while ResultList.Remove('') do;
+    end;
+
+    local procedure BuildResultJArray(ResultList: List of [Text]): JsonArray;
+    var
+        ResultJArray: JsonArray;
+        JObject: JsonObject;
+        Result: Text;
+    begin
+        foreach Result in ResultList do begin
+            JObject.ReadFrom(Result);
+            ResultJArray.Add(JObject);
+        end;
+
+        exit(ResultJArray);
     end;
 }
