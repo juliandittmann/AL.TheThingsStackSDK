@@ -54,7 +54,13 @@ page 50257 "jdi TTS Demo Application List"
             {
                 Caption = 'Load applications';
                 ApplicationArea = All;
-                Image = MoveDown;
+                Image = Download;
+
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                Scope = Page;
 
                 trigger OnAction()
                 var
@@ -66,6 +72,28 @@ page 50257 "jdi TTS Demo Application List"
                     Param.Add(GetApplicationsParam::AuthToken, GetDefaultAPIKey());
                     if ApplicationAPI.GetApplications(Cluster, APIVersion, Param, JResponse) then
                         ProcessJsonRespone(JResponse);
+                end;
+            }
+
+            action(ShowDevices)
+            {
+                Caption = 'Show Devices';
+                ApplicationArea = All;
+
+                PromotedCategory = Process;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                Scope = "Repeater";
+
+                Image = ShowChart;
+
+                trigger OnAction()
+                var
+                    TTSDeviceList: Page "jdi TTS Demo Device List";
+                begin
+                    TTSDeviceList.SetApplicationId(Rec.application_id);
+                    TTSDeviceList.Run();
                 end;
             }
         }
@@ -82,7 +110,7 @@ page 50257 "jdi TTS Demo Application List"
         JCreatedatToken: JsonToken;
         JUpdatedatToken: JsonToken;
 
-        applicationId: Code[50];
+        applicationId: Text[50];
         createdat: DateTime;
         updatedat: DateTime;
     begin
@@ -101,14 +129,14 @@ page 50257 "jdi TTS Demo Application List"
 
             if JApplicationObject.Get('ids', JIdsToken) then
                 if JIdsToken.AsObject().Get('application_id', JIdToken) then
-                    applicationId := JIdToken.AsValue().AsCode();
+                    applicationId := JIdToken.AsValue().AsText();
 
             CreateApplication(applicationId, createdat, updatedat);
         end;
 
     end;
 
-    local procedure CreateApplication(applicationId: Code[50]; createdat: DateTime; updatedat: DateTime)
+    local procedure CreateApplication(applicationId: Text[50]; createdat: DateTime; updatedat: DateTime)
     begin
         Rec.Init();
         Rec.application_id := applicationId;

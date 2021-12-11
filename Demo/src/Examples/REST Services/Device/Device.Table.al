@@ -4,19 +4,19 @@ table 50254 "jdi TTS Demo Device"
 
     fields
     {
-        field(1; "device_id"; Code[50])
+        field(1; "device_id"; Text[50])
         {
             Editable = false;
         }
-        field(2; "application_id"; Code[50])
+        field(2; "application_id"; Text[50])
         {
             Editable = false;
         }
-        field(3; "dev_eui"; Code[50])
+        field(3; "dev_eui"; Text[50])
         {
             Editable = false;
         }
-        field(4; "join_eui"; Code[50])
+        field(4; "join_eui"; Text[50])
         {
             Editable = false;
         }

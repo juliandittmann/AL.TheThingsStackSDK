@@ -4,11 +4,11 @@ table 50253 "jdi TTS Demo Gateway"
 
     fields
     {
-        field(1; "gateway_id"; Code[50])
+        field(1; "gateway_id"; Text[50])
         {
             Editable = false;
         }
-        field(2; eui; Code[50])
+        field(2; eui; Text[50])
         {
             Editable = false;
         }

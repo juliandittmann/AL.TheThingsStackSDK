@@ -58,7 +58,13 @@ page 50258 "jdi TTS Demo Gateway List"
             {
                 Caption = 'Load Gateways';
                 ApplicationArea = All;
-                Image = MoveDown;
+                Image = Download;
+
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                Scope = Page;
 
                 trigger OnAction()
                 var
@@ -87,8 +93,8 @@ page 50258 "jdi TTS Demo Gateway List"
         JUpdatedatToken: JsonToken;
         Jeu1Token: JsonToken;
 
-        gatewayId: Code[50];
-        eui: Code[50];
+        gatewayId: Text[50];
+        eui: Text[50];
         createdat: DateTime;
         updatedat: DateTime;
     begin
@@ -107,17 +113,17 @@ page 50258 "jdi TTS Demo Gateway List"
 
             if JGatewayObject.Get('ids', JIdsToken) then begin
                 if JIdsToken.AsObject().Get('gateway_id', JIdToken) then
-                    gatewayId := JIdToken.AsValue().AsCode();
+                    gatewayId := JIdToken.AsValue().AsText();
 
                 if JIdsToken.AsObject().Get('eui', Jeu1Token) then
-                    eui := JIdToken.AsValue().AsCode();
+                    eui := JIdToken.AsValue().AsText();
             end;
 
             CreateGateway(gatewayId, eui, createdat, updatedat);
         end;
     end;
 
-    local procedure CreateGateway(gatewayId: Code[50]; eui: Code[50]; createdat: DateTime; updatedat: DateTime)
+    local procedure CreateGateway(gatewayId: Text[50]; eui: Text[50]; createdat: DateTime; updatedat: DateTime)
     begin
         Rec.Init();
         Rec.gateway_id := gatewayId;

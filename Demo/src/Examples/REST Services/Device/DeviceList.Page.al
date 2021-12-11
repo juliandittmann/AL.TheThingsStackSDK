@@ -71,7 +71,13 @@ page 50259 "jdi TTS Demo Device List"
             {
                 Caption = 'Load Devices';
                 ApplicationArea = All;
-                Image = MoveDown;
+                Image = Download;
+
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                Scope = Page;
 
                 trigger OnAction()
                 var
@@ -84,6 +90,29 @@ page 50259 "jdi TTS Demo Device List"
                     Param.Add(GetDevicesParam::ApplicationID, ApplicationId);
                     if DeviceAPI.GetDevices(Cluster, APIVersion, Param, JResponse) then
                         ProcessJsonRespone(JResponse);
+                end;
+            }
+
+            action(ShowStorage)
+            {
+                Caption = 'Show Storage';
+                ApplicationArea = All;
+
+                PromotedCategory = Process;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                Scope = "Repeater";
+
+                Image = ShowChart;
+
+                trigger OnAction()
+                var
+                    TTSStorageList: Page "jdi TTS Demo Storage List";
+                begin
+                    TTSStorageList.SetApplicationId(Rec.application_id);
+                    TTSStorageList.SetDeviceId(Rec.device_id);
+                    TTSStorageList.Run();
                 end;
             }
         }
@@ -104,10 +133,10 @@ page 50259 "jdi TTS Demo Device List"
         JdeveuiToken: JsonToken;
         JjoineuiToken: JsonToken;
 
-        deviceId: Code[50];
-        applicationId: Code[50];
-        deveui: Code[50];
-        joineui: Code[50];
+        deviceId: Text[50];
+        applicationId: Text[50];
+        deveui: Text[50];
+        joineui: Text[50];
         createdat: DateTime;
         updatedat: DateTime;
     begin
@@ -126,17 +155,17 @@ page 50259 "jdi TTS Demo Device List"
 
             if JDeviceObject.Get('ids', JIdsToken) then begin
                 if JIdsToken.AsObject().Get('device_id', JIdToken) then
-                    deviceId := JIdToken.AsValue().AsCode();
+                    deviceId := JIdToken.AsValue().AsText();
 
                 if JIdsToken.AsObject().Get('dev_eui', JdeveuiToken) then
-                    deveui := JdeveuiToken.AsValue().AsCode();
+                    deveui := JdeveuiToken.AsValue().AsText();
 
                 if JIdsToken.AsObject().Get('join_eui', JjoineuiToken) then
-                    joineui := JjoineuiToken.AsValue().AsCode();
+                    joineui := JjoineuiToken.AsValue().AsText();
 
                 if JIdsToken.AsObject().Get('application_ids', JApplicationIdsToken) then
                     if JApplicationIdsToken.AsObject().Get('application_id', JapplicationIdToken) then
-                        applicationId := JapplicationIdToken.AsValue().AsCode();
+                        applicationId := JapplicationIdToken.AsValue().AsText();
             end;
 
 
@@ -145,7 +174,7 @@ page 50259 "jdi TTS Demo Device List"
         end;
     end;
 
-    local procedure CreateDevice(deviceId: Code[50]; applicationId: Code[50]; deveui: Code[50]; joineui: Code[50]; createdat: DateTime; updatedat: DateTime)
+    local procedure CreateDevice(deviceId: Text[50]; applicationId: Text[50]; deveui: Text[50]; joineui: Text[50]; createdat: DateTime; updatedat: DateTime)
     begin
         Rec.Init();
         Rec.device_id := deviceId;
@@ -163,6 +192,11 @@ page 50259 "jdi TTS Demo Device List"
     begin
         if TTSSDKDemoSetup.Get() then
             exit(TTSSDKDemoSetup.GetDefaultAPIKey());
+    end;
+
+    procedure SetApplicationId(_applicationId: Text)
+    begin
+        ApplicationId := _applicationId;
     end;
 
     var

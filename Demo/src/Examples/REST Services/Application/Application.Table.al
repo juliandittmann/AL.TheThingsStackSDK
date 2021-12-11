@@ -5,7 +5,7 @@ table 50252 "jdi TTS Demo Application"
 
     fields
     {
-        field(1; "application_id"; Code[50])
+        field(1; "application_id"; Text[50])
         {
             DataClassification = CustomerContent;
             Editable = false;
