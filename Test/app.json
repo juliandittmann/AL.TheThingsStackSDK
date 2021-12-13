@@ -9,7 +9,7 @@
   "EULA": "",
   "help": "",
   "url": "https://juliandittmann.github.io/AL.TheThingsStackSDK/",
-  "logo": "",
+  "logo": "images/logo_TTN256x256.png",
   "dependencies": [
     {
       "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
