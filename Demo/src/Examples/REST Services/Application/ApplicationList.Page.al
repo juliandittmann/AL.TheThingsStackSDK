@@ -54,7 +54,7 @@ page 50257 "jdi TTS Demo Application List"
             {
                 Caption = 'Load applications';
                 ApplicationArea = All;
-                Image = Download;
+                Image = Refresh;
 
                 Promoted = true;
                 PromotedCategory = Process;
