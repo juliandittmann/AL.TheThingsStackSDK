@@ -11,7 +11,8 @@ codeunit 52411 "jdi TTS GetDevicesv3" implements "jdi TTS IGetDevices"
         UriBuilder.Init(BuildAPIUrl(Cluster, Parameter.Get(GetDeviceParamenter::ApplicationID)));
         UriBuilder.GetUri(Uri);
 
-        exit(RESTHelper.InvokeWebRequest(Uri.GetAbsoluteUri(), Parameter.Get(GetDeviceParamenter::"AuthToken"), HttpResponse));
+        if RESTHelper.InvokeWebRequest(Uri.GetAbsoluteUri(), Parameter.Get(GetDeviceParamenter::"AuthToken"), HttpResponse) then
+            exit(HttpResponse.IsSuccessStatusCode());
     end;
 
     procedure GetDevices(Cluster: Enum "jdi TTS Cluster Address"; Parameter: Dictionary of [enum "jdi TTS Param GetDevices", Text]; var JsonResponse: JsonObject): Boolean;

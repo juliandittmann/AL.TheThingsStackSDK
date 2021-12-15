@@ -11,7 +11,8 @@ codeunit 52410 "jdi TTS GetApplicationsv3" implements "jdi TTS IGetApplications"
         UriBuilder.Init(BuildAPIUrl(Cluster));
         UriBuilder.GetUri(Uri);
 
-        exit(RESTHelper.InvokeWebRequest(Uri.GetAbsoluteUri(), Parameter.Get(GetApplicationParamenter::"AuthToken"), HttpResponse));
+        if RESTHelper.InvokeWebRequest(Uri.GetAbsoluteUri(), Parameter.Get(GetApplicationParamenter::"AuthToken"), HttpResponse) then
+            exit(HttpResponse.IsSuccessStatusCode());
     end;
 
     procedure GetApplications(Cluster: Enum "jdi TTS Cluster Address"; Parameter: Dictionary of [enum "jdi TTS Param GetApplications", Text]; var JsonResponse: JsonObject): Boolean;

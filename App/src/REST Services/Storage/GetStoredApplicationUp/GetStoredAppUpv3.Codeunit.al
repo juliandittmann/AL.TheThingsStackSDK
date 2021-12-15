@@ -15,7 +15,8 @@ codeunit 52413 "jdi TTS GetStoredAppUpv3" implements "jdi TTS IGetStoredAppUp"
         UriBuilder.SetQuery(GetQueryString(Parameter));
         UriBuilder.GetUri(Uri);
 
-        exit(InvokeWebRequest(Uri.GetAbsoluteUri(), AuthToken, HttpResponse));
+        if InvokeWebRequest(Uri.GetAbsoluteUri(), AuthToken, HttpResponse) then
+            exit(HttpResponse.IsSuccessStatusCode());
     end;
 
     procedure GetStoredApplicationUp(Cluster: Enum "jdi TTS Cluster Address"; Parameter: Dictionary of [enum "jdi TTS Param GetStoredAppUp", Text]; var JsonResponse: JsonObject): Boolean;

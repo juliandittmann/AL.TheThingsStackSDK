@@ -11,7 +11,8 @@ codeunit 52412 "jdi TTS GetGatewaysv3" implements "jdi TTS IGetGateways"
         UriBuilder.Init(BuildAPIUrl(Cluster));
         UriBuilder.GetUri(Uri);
 
-        exit(RESTHelper.InvokeWebRequest(Uri.GetAbsoluteUri(), Parameter.Get(GetDeviceParamenter::"AuthToken"), HttpResponse));
+        if RESTHelper.InvokeWebRequest(Uri.GetAbsoluteUri(), Parameter.Get(GetDeviceParamenter::"AuthToken"), HttpResponse) then
+            exit(HttpResponse.IsSuccessStatusCode());
     end;
 
     procedure GetGateways(Cluster: Enum "jdi TTS Cluster Address"; Parameter: Dictionary of [enum "jdi TTS Param GetGateways", Text]; var JsonResponse: JsonObject): Boolean;
