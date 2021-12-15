@@ -91,16 +91,18 @@ codeunit 52413 "jdi TTS GetStoredAppUpv3" implements "jdi TTS IGetStoredAppUp"
         exit(Client.Get(Url, Response));
     end;
 
-    local procedure ProcessHttpResponseMessage(Response: HttpResponseMessage; var ResponseJObject: JsonObject): Boolean;
+    local procedure ProcessHttpResponseMessage(Response: HttpResponseMessage; var ResponseJObject: JsonObject) HttpResponse: Boolean;
     var
         Result: Text;
-
     begin
         Clear(ResponseJObject);
-        if Response.Content().ReadAs(Result) then
-            ResponseJObject := BuildResultJObject(Result);
+        HttpResponse := Response.IsSuccessStatusCode();
 
-        exit(Response.IsSuccessStatusCode());
+        if Response.Content().ReadAs(Result) then
+            if HttpResponse then
+                ResponseJObject := BuildResultJObject(Result)
+            else
+                ResponseJObject.ReadFrom(Result);
     end;
 
     local procedure BuildResultJObject(Result: Text): JsonObject
