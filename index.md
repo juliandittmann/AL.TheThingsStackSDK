@@ -1,4 +1,4 @@
-## Welcome to The Things Stack SDK
+## The Things Stack SDK
 
 You can use the [editor on GitHub](https://github.com/juliandittmann/AL.TheThingsStackSDK/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
