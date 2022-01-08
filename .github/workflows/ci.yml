@@ -24,6 +24,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Azure Login
+        uses: Azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Azure key vault - Get Secrets
+        uses: Azure/get-keyvault-secrets@v1.2
+        with:
+          keyvault: "juliandittmann"
+          secrets: 'CodeSignCertPfxFile, CodeSignCertPfxPassword, InsiderSasToken'
+        id: azureGetSecretAction
+
       - name: Run pipeline
         uses: juliandittmann/run-alpipeline@v0.3
         with:
@@ -31,10 +43,10 @@ jobs:
           appVersion: ${{env.appVersion}}
           appBuild: ${{env.appBuild}}
           appRevision: ${{env.appRevision}}
-          InsiderSasToken: ${{ secrets.InsiderSasToken }}
           LicenseFile: ${{ secrets.LicenseFile }}
-          CodeSignCertPfxFile: ${{ secrets.CodeSignCertPfxFile }}
-          CodeSignCertPfxPassword: ${{ secrets.CodeSignCertPfxPassword }}
+          InsiderSasToken: ${{ steps.azureGetSecretAction.outputs.InsiderSasToken }}
+          CodeSignCertPfxFile: ${{ steps.azureGetSecretAction.outputs.CodeSignCertPfxFile }}
+          CodeSignCertPfxPassword: ${{ steps.azureGetSecretAction.outputs.CodeSignCertPfxPassword }}
           ApplicationInsightsConnectionString: ${{ secrets.ApplicationInsightsConnectionString }}
 
       - name: Save manifest
