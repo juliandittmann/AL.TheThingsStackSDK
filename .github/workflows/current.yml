@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run pipeline
-        uses: juliandittmann/run-alpipeline@v0.1
+        uses: juliandittmann/run-alpipeline@v0.3
         with:
           version: ${{env.version}}
           appVersion: ${{env.appVersion}}
@@ -33,6 +33,7 @@ jobs:
           LicenseFile: ${{ secrets.LicenseFile }}
           CodeSignCertPfxFile: ${{ secrets.CodeSignCertPfxFile }}
           CodeSignCertPfxPassword: ${{ secrets.CodeSignCertPfxPassword }}
+          ApplicationInsightsConnectionString: ${{ secrets.ApplicationInsightsConnectionString }}
 
       - name: Publish Test Results
         uses: mikepenz/action-junit-report@v1
