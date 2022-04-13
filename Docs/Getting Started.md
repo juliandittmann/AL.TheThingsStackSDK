@@ -12,5 +12,18 @@ For more Information click: [here](https://www.thethingsindustries.com/docs/gett
 
 ## Start Building LoRaWan Solutions
 
+Once you have access to The Things Stack, it’s time to start connecting devices. See the [Adding Devices section](https://www.thethingsindustries.com/docs/devices/adding-devices/) for instructions, or watch the video below for a complete introduction.
+
+If you’re using The Things Stack Community in an urban area, you may already have gateway coverage thanks to other members of the public The Things Network community. See [The Things Network Coverage Map](https://www.thethingsnetwork.org/map) to find out.
+
+If you’re not covered, or you want to add gateways to extend the coverage of your network, see the [Adding Gateways section](https://www.thethingsindustries.com/docs/gateways/adding-gateways/).
+
+Once you’ve added a device and it’s connected to a gateway and to The Things Stack, see the [Integrations section](https://www.thethingsindustries.com/docs/integrations/) to learn how to connect other services to act on device data.
+
+Reference: [here](https://www.thethingsindustries.com/docs/getting-started/quick-start/#build-lorawan-solutions)
+
+## Testing your Solution in Microsoft Dynamics 365 Business Central
+
+Once you finished your LoRaWan solution you can test the AL.TheThingsStackSDK in Microsoft Dynamics 365 Business Central with the [demo app](Demo%20App.md).
 
 
