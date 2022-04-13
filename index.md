@@ -1,20 +1,19 @@
 ## The Things Stack SDK
 
-You can use the [editor on GitHub](https://github.com/juliandittmann/AL.TheThingsStackSDK/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Recieve data from your The Things Stack LoRaWan IOT Solutions and process the in Microsoft Dynamics 365 Business Central.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![TTS Demo](assets/TTS%20Demo%20Storage.png)
 
-### What is The Things Stacks?
+### What is The Things Stack?
 
+The Things Stack is an enterprise grade LoRaWAN network server, built on an open source core. The Things Stack allows you to build and manage LoRaWAN networks on your own hardware or in the cloud. Reference: [here](https://www.thethingsindustries.com/docs/getting-started/what-is-tts/)
 
+### Features
 
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/juliandittmann/AL.TheThingsStackSDK/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- Uses HTTPS by default.
+- Accessible and extensible by other developers.
+- Implements the documented best practices for The Things Stack. For example, it automatically encodes query parameters. A commonly overlooked stepped which greatly reduces the chances of invalid queries being sent to the service.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Having trouble with AL.TheTingsStackSDK? Check out my [documentation](https://github.com/juliandittmann/AL.TheThingsStackSDK/tree/main/Docs/) or [contact support](https://github.com/juliandittmann/AL.TheThingsStackSDK/issues) and I’ll help you sort it out.
