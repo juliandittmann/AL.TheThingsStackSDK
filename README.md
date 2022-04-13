@@ -13,9 +13,9 @@ This is a SDK which provides API access to The Things Stack. Take a look at the 
 
 The Things Stack is an enterprise grade LoRaWAN network server, built on an open source core. The Things Stack allows you to build and manage LoRaWAN networks on your own hardware or in the cloud. Reference: [here](https://www.thethingsindustries.com/docs/getting-started/what-is-tts/)
 
-## App Package (Preview)
+## App Packages (Preview)
 
-There are downloadlinks to the latest app packages. 
+There are download links to the latest app packages. 
 
 Links:
 

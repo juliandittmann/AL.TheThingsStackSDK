@@ -17,6 +17,7 @@ Install via BCContainerhelper:
 Search for "TTS Demo Setup" and set a Default API Key.  
 
 ![TTSSetup](/Docs/assets/TTSSetup.png)
+
 Now you are ready to go.
 
 
@@ -37,7 +38,7 @@ Search for "TTS Demo Applications". Select a cluster and click "Load Application
 
 ![TTSGateways](/Docs/assets/TTS%20Demo%20Applications.png)
 
-Clicking "Show Devices" to load the Devices that are registered to the application.
+Click "Show Devices" to load the Devices that are registered to the application.
 
 ## Get Devices
 
