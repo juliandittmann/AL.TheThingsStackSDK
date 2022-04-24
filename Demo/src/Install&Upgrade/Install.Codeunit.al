@@ -1,4 +1,4 @@
-codeunit 50250 "jdi TTS Demo Install"
+codeunit 52355 "jdi TTS Demo Install"
 {
     Subtype = Install;
 

@@ -1,4 +1,4 @@
-page 50253 "jdi TTS Demo Setup Card"
+page 52352 "jdi TTS Demo Setup Card"
 {
     PageType = Card;
     ApplicationArea = All;

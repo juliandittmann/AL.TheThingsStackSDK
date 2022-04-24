@@ -1,4 +1,4 @@
-codeunit 50254 "jdi TTS Demo GetGateways"
+codeunit 52353 "jdi TTS Demo GetGateways"
 {
     Access = Internal;
     Description = 'Code sample how to use GetGateways API';

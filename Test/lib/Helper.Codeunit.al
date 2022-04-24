@@ -1,4 +1,4 @@
-codeunit 50100 "jdi TTS Test Helper"
+codeunit 50350 "jdi TTS Test Helper"
 {
     procedure Create(TestSuiteName: code[10]; TestCodeunitFilter: Text; EmptyTestSuite: Boolean)
     var

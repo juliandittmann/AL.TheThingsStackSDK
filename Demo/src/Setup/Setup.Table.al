@@ -1,4 +1,4 @@
-table 50251 "jdi TTS Demo Setup"
+table 52351 "jdi TTS Demo Setup"
 {
     DataClassification = SystemMetadata;
     Access = Internal;

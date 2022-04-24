@@ -1,4 +1,4 @@
-codeunit 50106 "jdi TTS Test API Storage"
+codeunit 50356 "jdi TTS Test API Storage"
 {
     Subtype = Test;
     TestPermissions = Disabled;

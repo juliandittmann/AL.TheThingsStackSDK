@@ -1,4 +1,4 @@
-codeunit 50105 "jdi TTS Test API Device"
+codeunit 50355 "jdi TTS Test API Device"
 {
     Subtype = Test;
     TestPermissions = Disabled;

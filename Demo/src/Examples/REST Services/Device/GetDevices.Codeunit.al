@@ -1,4 +1,4 @@
-codeunit 50253 "jdi TTS Demo GetDevices"
+codeunit 52352 "jdi TTS Demo GetDevices"
 {
     Access = Internal;
     Description = 'Code sample how to use GetDevices API';

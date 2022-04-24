@@ -1,4 +1,4 @@
-codeunit 50103 "jdi TTS Test API Gateway"
+codeunit 50353 "jdi TTS Test API Gateway"
 {
     Subtype = Test;
     TestPermissions = Disabled;

@@ -5,12 +5,17 @@
         {
             "id": "AS0051",
             "action": "Hidden",
-            "justification": "This is a Template"
+            "justification": "app.json incomplete."
         },
         {
             "id": "AS0084",
             "action": "Hidden",
-            "justification": "Objectrange in Template does not matter"
+            "justification": "Objectrange is fine."
+        },
+        {
+            "id": "AA0072",
+            "action": "Hidden",
+            "justification": "Prefix for BaseApp Objects not needed."
         }
     ]
 }

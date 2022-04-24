@@ -1,4 +1,4 @@
-table 50252 "jdi TTS Demo Application"
+table 52355 "jdi TTS Demo Application"
 {
     DataClassification = CustomerContent;
     TableType = Temporary;

@@ -1,4 +1,4 @@
-codeunit 50101 "jdi TTS Test Install"
+codeunit 50351 "jdi TTS Test Install"
 {
     Subtype = Install;
 
@@ -6,6 +6,6 @@ codeunit 50101 "jdi TTS Test Install"
     var
         TestToolHelper: Codeunit "jdi TTS Test Helper";
     begin
-        TestToolHelper.Create('DEFAULT', '50100..50199', true);
+        TestToolHelper.Create('DEFAULT', '50350..50399', true);
     end;
 }
