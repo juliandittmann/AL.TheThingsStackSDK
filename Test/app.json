@@ -3,7 +3,7 @@
   "name": "The Things Stack SDK Test",
   "publisher": "Julian Dittmann",
   "brief": "Test App for The Things Stack SDK",
-  "description": "AL.Template Test App",
+  "description": "The Things Stack SDK Test App",
   "version": "20.0.0.0",
   "privacyStatement": "",
   "EULA": "",
@@ -61,8 +61,8 @@
   },
   "idRanges":[
     {
-      "from": 50100,
-      "to": 50199
+      "from": 50350,
+      "to": 50399
     }
   ],
   "contextSensitiveHelpUrl": "https://github.com/juliandittmann/AL.TheThingsStackSDK",
