@@ -1,4 +1,4 @@
-table 50250 "jdi TTS Demo API Key"
+table 52350 "jdi TTS Demo API Key"
 {
     DataClassification = AccountData;
     LookupPageId = "jdi TTS Demo API Key List";

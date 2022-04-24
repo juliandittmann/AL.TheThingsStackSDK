@@ -1,4 +1,4 @@
-codeunit 50252 "jdi TTS Demo GetApplications"
+codeunit 52351 "jdi TTS Demo GetApplications"
 {
     Access = Internal;
     Description = 'Code sample how to use GetApplications API';

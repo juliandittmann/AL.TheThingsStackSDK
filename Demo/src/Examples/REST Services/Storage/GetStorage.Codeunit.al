@@ -1,4 +1,4 @@
-codeunit 50255 "jdi TTS Demo GetStorage"
+codeunit 52354 "jdi TTS Demo GetStorage"
 {
     Access = Internal;
     Description = 'Code sample how to use GetStorage API';

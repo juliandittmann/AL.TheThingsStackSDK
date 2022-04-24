@@ -1,4 +1,4 @@
-permissionset 50250 "jdi TTS Demo SDK"
+permissionset 52350 "jdi TTS Demo SDK"
 {
     Caption = 'The Things Stack SDK Demo';
     Assignable = true;

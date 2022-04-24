@@ -1,4 +1,4 @@
-table 50254 "jdi TTS Demo Device"
+table 52353 "jdi TTS Demo Device"
 {
     TableType = Temporary;
 

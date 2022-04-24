@@ -1,4 +1,4 @@
-page 50259 "jdi TTS Demo Device List"
+page 52354 "jdi TTS Demo Device List"
 {
 
     ApplicationArea = All;

@@ -1,4 +1,4 @@
-codeunit 50251 "jdi TTS Demo Upgrade"
+codeunit 52350 "jdi TTS Demo Upgrade"
 {
     Subtype = Upgrade;
 

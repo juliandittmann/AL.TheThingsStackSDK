@@ -1,4 +1,4 @@
-page 50260 "jdi TTS Demo Storage List"
+page 52355 "jdi TTS Demo Storage List"
 {
 
     ApplicationArea = All;
